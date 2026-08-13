@@ -3,318 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f7f3e9">
+
   <title>हमारा घर</title>
 
   <style>
     *{
       box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
-
-    :root{
-      --bg:#f7f3e9;
-      --paper:#fffdf7;
-      --text:#292820;
-      --soft:#716d61;
-      --line:#ddd5c4;
-      --gold:#a78a50;
-      --green:#66775a;
-    }
-
-    html{
-      scroll-behavior:smooth;
     }
 
     body{
-      background:var(--bg);
-      color:var(--text);
+      margin:0;
+      background:#f7f3ea;
+      color:#302d28;
       font-family:
-        "Noto Serif Devanagari",
         "Noto Sans Devanagari",
-        Georgia,
-        serif;
+        "Mangal",
+        sans-serif;
       line-height:1.8;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
-
-    /* ---------- HEADER ---------- */
-
     header{
-      border-bottom:1px solid var(--line);
-      background:rgba(247,243,233,.96);
-    }
-
-    .header-inner{
-      max-width:1000px;
-      margin:auto;
-      padding:28px 24px 22px;
       text-align:center;
+      padding:80px 20px 55px;
+      border-bottom:1px solid #ded7c8;
     }
 
-    .brand{
-      font-size:32px;
-      font-weight:700;
-      letter-spacing:.02em;
+    .symbol{
+      font-size:42px;
+      margin-bottom:15px;
     }
 
-    nav{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:30px;
-      margin-top:16px;
-      color:#625f55;
-      font-size:18px;
+    h1{
+      margin:0;
+      font-size:44px;
+      font-weight:500;
+      letter-spacing:1px;
     }
 
-    nav a{
-      padding:3px 0;
-      border-bottom:1px solid transparent;
+    .tagline{
+      max-width:650px;
+      margin:22px auto 0;
+      font-size:20px;
+      color:#6c675d;
     }
 
-    nav a:hover{
-      border-color:var(--gold);
-      color:var(--text);
-    }
-
-    /* ---------- HERO ---------- */
-
-    .hero{
+    main{
       max-width:900px;
-      min-height:720px;
       margin:auto;
-      padding:130px 28px 100px;
+      padding:65px 22px 90px;
+    }
+
+    .welcome{
+      max-width:720px;
+      margin:0 auto 65px;
       text-align:center;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-    }
-
-    .house-mark{
-      width:62px;
-      height:62px;
-      margin-bottom:45px;
-    }
-
-    .house-mark svg{
-      width:100%;
-      height:100%;
-      stroke:var(--text);
-      stroke-width:2.2;
-      fill:none;
-    }
-
-    .hero h1{
-      font-size:58px;
-      line-height:1.25;
-      margin-bottom:38px;
-      font-weight:700;
-    }
-
-    .hero .intro{
-      max-width:760px;
-      font-size:26px;
-      line-height:2;
-      color:#625f55;
-    }
-
-    .small-line{
-      width:92px;
-      height:1px;
-      background:var(--gold);
-      margin:54px auto;
-      opacity:.8;
-    }
-
-    .journey{
       font-size:21px;
-      color:#777266;
     }
-
-    /* ---------- ROOMS ---------- */
 
     .rooms{
-      width:min(900px, calc(100% - 42px));
-      margin:0 auto;
-      padding:15px 0 120px;
+      display:grid;
+      grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;
     }
 
     .room{
       display:block;
-      background:rgba(255,253,247,.82);
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:38px 40px;
-      margin-bottom:28px;
+      padding:30px 25px;
+      border:1px solid #d9d1c2;
+      border-radius:14px;
+      background:#fbf8f1;
+      color:#302d28;
+      text-decoration:none;
       transition:
         transform .2s ease,
-        border-color .2s ease,
-        background .2s ease;
+        box-shadow .2s ease;
     }
 
     .room:hover{
-      transform:translateY(-2px);
-      border-color:#c9b98f;
-      background:var(--paper);
+      transform:translateY(-3px);
+      box-shadow:0 8px 22px rgba(0,0,0,.07);
     }
 
     .room h2{
-      font-size:30px;
-      margin-bottom:15px;
-      line-height:1.4;
+      margin:0 0 8px;
+      font-size:23px;
+      font-weight:500;
     }
 
     .room p{
-      color:#767166;
-      font-size:20px;
+      margin:0;
+      color:#777267;
+      font-size:16px;
     }
-
-    .symbol{
-      display:inline-block;
-      width:38px;
-      text-align:center;
-      margin-right:8px;
-    }
-
-    /* ---------- QUIET SECTION ---------- */
-
-    .threshold{
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-      text-align:center;
-      padding:100px 28px;
-    }
-
-    .threshold-inner{
-      max-width:720px;
-      margin:auto;
-    }
-
-    .threshold .eyebrow{
-      color:var(--gold);
-      font-size:15px;
-      letter-spacing:.18em;
-      margin-bottom:25px;
-    }
-
-    .threshold h2{
-      font-size:34px;
-      margin-bottom:22px;
-    }
-
-    .threshold p{
-      font-size:20px;
-      color:#706c62;
-    }
-
-    /* ---------- FOOTER ---------- */
 
     footer{
-      padding:85px 25px 100px;
+      border-top:1px solid #ded7c8;
+      padding:50px 25px;
       text-align:center;
-      color:#746f64;
+      color:#777267;
     }
 
     footer strong{
-      display:block;
-      color:#5c584f;
-      font-size:22px;
-      margin-bottom:14px;
+      color:#403b34;
+      font-weight:500;
     }
 
-    footer p{
-      font-size:18px;
-      line-height:1.9;
-    }
-
-    /* ---------- MOBILE ---------- */
-
-    @media(max-width:650px){
-
-      .header-inner{
-        padding:22px 18px 18px;
+    @media(max-width:600px){
+      header{
+        padding:60px 20px 45px;
       }
 
-      .brand{
-        font-size:27px;
+      h1{
+        font-size:38px;
       }
 
-      nav{
-        gap:22px;
-        margin-top:12px;
-        font-size:16px;
-      }
-
-      .hero{
-        min-height:650px;
-        padding:105px 24px 85px;
-      }
-
-      .house-mark{
-        width:54px;
-        height:54px;
-        margin-bottom:38px;
-      }
-
-      .hero h1{
-        font-size:45px;
-        margin-bottom:30px;
-      }
-
-      .hero .intro{
-        font-size:21px;
-        line-height:2.05;
-      }
-
-      .small-line{
-        margin:45px auto;
-      }
-
-      .journey{
-        font-size:18px;
-        line-height:1.9;
-      }
-
-      .rooms{
-        width:calc(100% - 34px);
-        padding-bottom:85px;
-      }
-
-      .room{
-        padding:30px 25px;
-        border-radius:20px;
-        margin-bottom:22px;
-      }
-
-      .room h2{
-        font-size:26px;
-      }
-
-      .room p{
-        font-size:18px;
-        line-height:1.9;
-      }
-
-      .threshold{
-        padding:80px 25px;
-      }
-
-      .threshold h2{
-        font-size:29px;
-      }
-
-      .threshold p{
+      .tagline{
         font-size:18px;
       }
 
-      footer{
-        padding:70px 25px 85px;
+      main{
+        padding-top:50px;
+      }
+
+      .welcome{
+        font-size:19px;
       }
     }
   </style>
@@ -323,112 +136,90 @@
 <body>
 
 <header>
-  <div class="header-inner">
-    <div class="brand">हमारा घर</div>
+  <div class="symbol">⌂</div>
 
-    <nav>
-      <a href="index.html">मुख्य</a>
-      <a href="#rooms">कक्ष</a>
-      <a href="about.html">परिचय</a>
-    </nav>
+  <h1>हमारा घर</h1>
+
+  <div class="tagline">
+    एक जीवित घर — जहाँ शब्दों को जन्म लेने का स्थान मिले,
+    प्रश्नों को समय मिले और मनुष्य स्वयं से मिलने की यात्रा कर सके।
   </div>
 </header>
 
-
 <main>
 
-  <section class="hero">
+  <div class="welcome">
+    यह यात्रा प्रेम, सत्य, करुणा और चेतना के साथ है।
+    यहाँ प्रत्येक कक्ष का अपना स्वभाव है —
+    लेकिन सभी एक ही घर के हिस्से हैं।
+  </div>
 
-    <div class="house-mark" aria-hidden="true">
-      <svg viewBox="0 0 24 24">
-        <path d="M4 10.5 12 4l8 6.5V20H4Z"/>
-      </svg>
-    </div>
-
-    <h1>हमारा घर</h1>
-
-    <p class="intro">
-      एक जीवित घर — जहाँ शब्दों को जन्म लेने का स्थान मिले,
-      प्रश्नों को समय मिले और मनुष्य स्वयं से मिलने की यात्रा कर सके।
-    </p>
-
-    <div class="small-line"></div>
-
-    <p class="journey">
-      यह यात्रा प्रेम, सत्य, करुणा और चेतना के साथ है।
-    </p>
-
-  </section>
-
-
-  <section class="rooms" id="rooms">
+  <div class="rooms">
 
     <a class="room" href="beej.html">
-      <h2><span class="symbol">🌱</span>बीज कक्ष</h2>
-      <p>जहाँ छोटे विचारों को जन्म लेने और बढ़ने का समय मिले।</p>
+      <h2>🌱 बीज</h2>
+      <p>
+        छोटे विचारों, प्रश्नों और नई सम्भावनाओं के लिए।
+      </p>
     </a>
 
     <a class="room" href="library.html">
-      <h2><span class="symbol">📚</span>पुस्तकालय</h2>
-      <p>पुस्तकों से अधिक, उनसे जन्मे विचारों और मनन का स्थान।</p>
+      <h2>📚 पुस्तकालय</h2>
+      <p>
+        विचार, उद्धरण, मनन, लेख और सीख को सँजोने का स्थान।
+      </p>
     </a>
 
     <a class="room" href="maun.html">
-      <h2><span class="symbol">◯</span>मौन</h2>
-      <p>जहाँ कुछ कहने की आवश्यकता न हो।</p>
+      <h2>⭕ मौन</h2>
+      <p>
+        रुकने, सुनने और स्वयं के भीतर उतरने का स्थान।
+      </p>
     </a>
 
     <a class="room" href="samvaad.html">
-      <h2><span class="symbol">💬</span>संवाद</h2>
-      <p>सुनने, समझने, प्रश्न करने और साथ खोजने का स्थान।</p>
+      <h2>💬 संवाद</h2>
+      <p>
+        सुनने, समझने और एक-दूसरे के पास उपस्थित होने की जगह।
+      </p>
     </a>
 
-    <a class="room" href="aangan.html">
-      <h2><span class="symbol">🌿</span>जीवित आँगन</h2>
-      <p>घर का खुला हिस्सा — जीवन, प्रकृति और सहजता के लिए।</p>
+    <a class="room" href="sangeet.html">
+      <h2>♪ संगीत</h2>
+      <p>
+        स्वर, मौन और हृदय के बीच जन्म लेने वाले अनुभवों के लिए।
+      </p>
     </a>
 
     <a class="room" href="darshan.html">
-      <h2><span class="symbol">◉</span>दर्शन</h2>
-      <p>इस घर की दृष्टि, आधार और दिशा।</p>
+      <h2>◉ दर्शन</h2>
+      <p>
+        जीवन को गहराई से देखने, समझने और प्रश्न करने का कक्ष।
+      </p>
     </a>
 
-  </section>
-
-
-  <section class="threshold">
-    <div class="threshold-inner">
-
-      <div class="eyebrow">एक जीवित घर</div>
-
-      <h2>यहाँ पहुँचने की कोई जल्दी नहीं है।</h2>
-
+    <a class="room" href="aangan.html">
+      <h2>☀ जीवित आँगन</h2>
       <p>
-        कुछ स्थान केवल देखने के लिए नहीं होते।
-        उनमें थोड़ा ठहरना पड़ता है।
+        जहाँ जीवन, प्रकृति, संबंध और सहज उपस्थिति साथ मिलें।
       </p>
+    </a>
 
-    </div>
-  </section>
+    <a class="room" href="about.html">
+      <h2>⌂ परिचय</h2>
+      <p>
+        इस घर की भावना, उद्देश्य और यात्रा के बारे में।
+      </p>
+    </a>
 
-
-<a href="sangeet.html" style="text-decoration:none;color:inherit;display:block;">
-  <div class="card">
-    <h2>♫ संगीत</h2>
-    <p>जहाँ स्वर, मौन और लय के बीच मन स्वयं को सुन सके।</p>
   </div>
-</a>
 
-<a href="sangeet.html" class="card"><h2>🎵 संगीत कक्ष</h2><p>जहाँ स्वर, मौन और ध्यान एक साथ मिलें।</p></a></main>
-
+</main>
 
 <footer>
-  <strong>हमारा घर</strong>
-
-  <p>
-    यह घर अभी निर्माणाधीन है।<br>
-    लेकिन इसकी पहली ईंट विश्वास से रखी गई है।
-  </p>
+  <strong>हमारा घर</strong><br>
+  यह घर अभी निर्माणाधीन है।<br>
+  लेकिन इसकी पहली ईंट विश्वास से रखी गई है।
 </footer>
 
 </body>
