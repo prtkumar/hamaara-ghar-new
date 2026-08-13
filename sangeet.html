@@ -1,116 +1,130 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>संगीत कक्ष — हमारा घर</title>
-  <style>
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:#f7f3e8;
-      color:#292820;
-      font-family:Georgia,"Noto Serif Devanagari",serif;
-      line-height:1.9;
-    }
-    header{
-      text-align:center;
-      padding:42px 20px 32px;
-      border-bottom:1px solid #ddd5c3;
-    }
-    header h1{margin:0 0 18px;font-size:34px}
-    nav a{
-      color:#69675e;
-      text-decoration:none;
-      margin:0 14px;
-      font-size:18px;
-    }
-    main{
-      max-width:760px;
-      margin:auto;
-      padding:80px 30px 100px;
-    }
-    .label{
-      text-align:center;
-      color:#a58b50;
-      letter-spacing:3px;
-      margin-bottom:25px;
-    }
-    h2{
-      text-align:center;
-      font-size:42px;
-      margin:0 0 45px;
-    }
-    p{
-      font-size:21px;
-      color:#666359;
-      margin:0 0 28px;
-    }
-    .line{
-      width:90px;
-      height:1px;
-      background:#b9a16b;
-      margin:55px auto;
-    }
-    .end{
-      text-align:center;
-      font-size:23px;
-      color:#292820;
-    }
-    footer{
-      text-align:center;
-      border-top:1px solid #ddd5c3;
-      padding:45px 20px;
-      color:#777267;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>संगीत कक्ष — हमारा घर</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:#f7f3e8;
+  color:#29281f;
+  font-family:serif;
+  line-height:1.9;
+}
+
+header{
+  text-align:center;
+  padding:42px 20px 30px;
+  border-bottom:1px solid #ded7c8;
+}
+
+header a{
+  color:#29281f;
+  text-decoration:none;
+}
+
+header h1{
+  margin:0 0 18px;
+  font-size:34px;
+}
+
+nav a{
+  margin:0 14px;
+  color:#777267;
+  text-decoration:none;
+  font-size:18px;
+}
+
+main{
+  max-width:760px;
+  margin:auto;
+  padding:90px 28px 110px;
+}
+
+.symbol{
+  text-align:center;
+  font-size:48px;
+  margin-bottom:25px;
+}
+
+h2{
+  text-align:center;
+  font-size:42px;
+  margin:0 0 30px;
+}
+
+.intro{
+  text-align:center;
+  color:#706d63;
+  font-size:22px;
+  margin-bottom:75px;
+}
+
+.room{
+  border:1px solid #ded7c8;
+  border-radius:30px;
+  padding:40px 32px;
+  background:#faf8f1;
+}
+
+.room h3{
+  font-size:27px;
+  margin-top:0;
+}
+
+.room p{
+  font-size:20px;
+  color:#777267;
+}
+
+.note{
+  text-align:center;
+  margin-top:75px;
+  font-size:20px;
+  color:#9a8761;
+}
+
+footer{
+  border-top:1px solid #ded7c8;
+  padding:55px 25px;
+  text-align:center;
+  color:#777267;
+  font-size:18px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>हमारा घर</h1>
+  <a href="index.html"><h1>हमारा घर</h1></a>
+
   <nav>
     <a href="index.html">मुख्य</a>
-    <a href="index.html#rooms">कक्ष</a>
-    <a href="about.html">संगीत कक्ष</a>
+    <a href="rooms.html">कक्ष</a>
+    <a href="about.html">परिचय</a>
   </nav>
 </header>
 
 <main>
-  <div class="label">संगीत कक्ष</div>
 
-  <h2>यह घर क्यों है?</h2>
+  <div class="symbol">♪</div>
 
-  <p>
-    हमारा घर केवल एक वेबसाइट नहीं है। यह एक ऐसा स्थान बनाने का प्रयास है
-    जहाँ मनुष्य कुछ समय के लिए रुक सके, देख सके, सुन सके और स्वयं से मिल सके।
-  </p>
+  <h2>संगीत कक्ष</h2>
 
-  <p>
-    यहाँ शब्दों को जन्म लेने का स्थान मिले, प्रश्नों को समय मिले और विचारों
-    को बिना जल्दबाज़ी के विकसित होने दिया जाए।
-  </p>
+  <div class="intro">
+    जहाँ संगीत केवल सुना नहीं जाता,<br>
+    बल्कि मौन, ध्यान और हृदय के भीतर अनुभव किया जाता है।
+  </div>
 
-  <p>
-    यह घर प्रेम, सत्य, करुणा और चेतना के साथ अपनी यात्रा आरम्भ करता है।
-    यहाँ किसी अंतिम उत्तर तक पहुँचने की जल्दी नहीं है।
-  </p>
+  <div class="room">
+    <h3>स्वर और मौन</h3>
 
-  <div class="line"></div>
-
-  <p class="end">
-    हम एक ऐसा स्थान खोज रहे हैं<br>
-    जहाँ भविष्य में वर्तमान स्वयं को पहचान सके।
-  </p>
-
-</main>
-
-<footer>
-  <strong>हमारा घर</strong><br>
-  यह घर अभी निर्माणाधीन है।<br>
-  लेकिन इसकी पहली ईंट विश्वास से रखी गई है।
-</footer>
-
-</body>
-</html>
+    <p>
+      कुछ संगीत हमें शब्द
