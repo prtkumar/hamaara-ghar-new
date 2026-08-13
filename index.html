@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>हमारा घर</title>
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:#f7f3e9;
+      color:#29261f;
+      font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;
+    }
+    header{
+      padding:18px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom:1px solid #ddd5c4;
+      background:#fbf8f0;
+    }
+    .brand{
+      font-size:22px;
+      font-weight:700;
+    }
+    nav a{
+      color:#514b3e;
+      text-decoration:none;
+      margin-left:18px;
+    }
+    .hero{
+      min-height:72vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:50px 22px;
+    }
+    .hero-inner{max-width:760px}
+    .symbol{
+      font-size:58px;
+      margin-bottom:22px;
+    }
+    h1{
+      font-size:clamp(42px,9vw,78px);
+      margin:0 0 20px;
+      font-weight:600;
+    }
+    .lead{
+      font-size:20px;
+      line-height:1.9;
+      color:#595348;
+      margin:auto;
+      max-width:650px;
+    }
+    .line{
+      width:70px;
+      height:1px;
+      background:#a99c7e;
+      margin:35px auto;
+    }
+    .thought{
+      font-size:18px;
+      line-height:1.9;
+      color:#706859;
+    }
+    .rooms{
+      max-width:950px;
+      margin:auto;
+      padding:30px 20px 80px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+      gap:16px;
+    }
+    .room{
+      padding:28px 22px;
+      background:#fffdf8;
+      border:1px solid #e1dacb;
+      border-radius:14px;
+      text-decoration:none;
+      color:#29261f;
+    }
+    .room h2{margin:0 0 10px;font-size:21px}
+    .room p{margin:0;color:#746d60;line-height:1.7}
+    footer{
+      text-align:center;
+      padding:35px 20px;
+      border-top:1px solid #ddd5c4;
+      color:#756e61;
+      line-height:1.8;
+    }
+    @media(max-width:650px){
+      header{display:block;text-align:center}
+      nav{margin-top:14px}
+      nav a{margin:0 7px;font-size:14px}
+      .hero{min-height:68vh}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">हमारा घर</div>
+  <nav>
+    <a href="#home">मुख्य</a>
+    <a href="#rooms">कक्ष</a>
+    <a href="#about">परिचय</a>
+  </nav>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="symbol">⌂</div>
+
+      <h1>हमारा घर</h1>
+
+      <p class="lead">
+        एक जीवित घर — जहाँ शब्दों को जन्म लेने का स्थान मिले,
+        प्रश्नों को समय मिले और मनुष्य स्वयं से मिलने की यात्रा कर सके।
+      </p>
+
+      <div class="line"></div>
+
+      <p class="thought">
+        यह यात्रा प्रेम, सत्य, करुणा और चेतना के साथ है।
+      </p>
+    </div>
+  </section>
+
+  <section class="rooms" id="rooms">
+
+    <a class="room" href="#">
+      <h2>🌱 बीज कक्ष</h2>
+      <p>जहाँ छोटे विचारों को जन्म लेने और बढ़ने का समय मिले।</p>
+    </a>
+
+    <a class="room" href="#">
+      <h2>📚 पुस्तकालय</h2>
+      <p>पुस्तकों से अधिक, उनसे जन्मे विचारों और मनन का स्थान।</p>
+    </a>
+
+    <a class="room" href="#">
+      <h2>⭕ मौन</h2>
+      <p>जहाँ कुछ कहने की आवश्यकता न हो।</p>
+    </a>
+
+    <a class="room" href="#">
+      <h2>💬 संवाद</h2>
+      <p>सुनने, समझने, प्रश्न करने और साथ खोजने का स्थान।</p>
+    </a>
+
+    <a class="room" href="#">
+      <h2>🌿 जीवित आँगन</h2>
+      <p>घर का खुला हिस्सा — जीवन, प्रकृति और सहजता के लिए।</p>
+    </a>
+
+    <a class="room" href="#">
+      <h2>◉ दर्शन</h2>
+      <p>इस घर की दृष्टि, आधार और दिशा।</p>
+    </a>
+
+  </section>
+</main>
+
+<footer id="about">
+  <strong>हमारा घर</strong><br>
+  यह घर अभी निर्माणाधीन है।<br>
+  लेकिन इसकी पहली ईंट विश्वास से रखी गई है।
+</footer>
+
+</body>
+</html>
