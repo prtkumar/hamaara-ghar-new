@@ -1,56 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>संगीत — हमारा घर</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>संगीत कक्ष — हमारा घर</title>
+
 <style>
+*{box-sizing:border-box}
+
 body{
   margin:0;
   background:#f7f3e8;
   color:#292820;
-  font-family:serif;
+  font-family:Georgia,"Noto Serif Devanagari",serif;
+  line-height:1.9;
 }
-.wrap{
+
+header{
+  text-align:center;
+  padding:42px 20px 32px;
+  border-bottom:1px solid #ddd5c3;
+}
+
+header h1{
+  margin:0 0 18px;
+  font-size:34px;
+}
+
+nav a{
+  color:#69675e;
+  text-decoration:none;
+  margin:0 14px;
+  font-size:18px;
+}
+
+main{
   max-width:760px;
   margin:auto;
-  padding:70px 28px;
+  padding:90px 30px 120px;
   text-align:center;
 }
-a{
-  color:#6e695d;
-  text-decoration:none;
-}
-.back{
-  display:inline-block;
-  margin-bottom:80px;
-}
+
 .symbol{
-  font-size:52px;
+  font-size:48px;
+  margin-bottom:25px;
 }
-h1{
-  font-size:42px;
-  margin:20px 0;
+
+.label{
+  color:#a58b50;
+  letter-spacing:3px;
+  margin-bottom:18px;
 }
-p{
+
+h2{
+  font-size:43px;
+  margin:0 0 40px;
+}
+
+.intro{
   font-size:22px;
-  line-height:1.9;
-  color:#777166;
+  color:#666359;
+  margin:0 auto;
+  max-width:650px;
+}
+
+.line{
+  width:90px;
+  height:1px;
+  background:#b9a16b;
+  margin:60px auto;
+}
+
+.thought{
+  font-size:26px;
+  line-height:1.8;
+  max-width:620px;
+  margin:auto;
+}
+
+.note{
+  margin-top:70px;
+  padding:35px 25px;
+  border:1px solid #ddd5c3;
+  border-radius:22px;
+  background:#fbf9f2;
+  color:#6c685e;
+  font-size:19px;
+}
+
+footer{
+  text-align:center;
+  border-top:1px solid #ddd5c3;
+  padding:45px 20px;
+  color:#777267;
 }
 </style>
 </head>
 
 <body>
-<main class="wrap">
-  <a class="back" href="index.html">← हमारा घर</a>
+
+<header>
+  <h1>हमारा घर</h1>
+  <nav>
+    <a href="index.html">मुख्य</a>
+    <a href="index.html#rooms">कक्ष</a>
+    <a href="about.html">परिचय</a>
+  </nav>
+</header>
+
+<main>
 
   <div class="symbol">♫</div>
+  <div class="label">संगीत कक्ष</div>
 
-  <h1>संगीत</h1>
+  <h2>जहाँ ध्वनि भी मौन की ओर ले जाए।</h2>
 
-  <p>
-    जहाँ स्वर, मौन और लय के बीच मन स्वयं को सुन सके।
+  <p class="intro">
+    यह कक्ष उस संगीत के लिए है जो केवल सुना नहीं जाता,
+    बल्कि भीतर उतरता है। जहाँ स्वर मन को शांत करें,
+    हृदय को कोमल करें और हमें कुछ क्षण स्वयं के निकट ले आएँ।
   </p>
+
+  <div class="line"></div>
+
+  <p class="thought">
+    कभी-कभी शब्द जहाँ समाप्त होते हैं,<br>
+    संगीत वहीं से अपनी बात कहना आरम्भ करता है।
+  </p>
+
+  <div class="note">
+    यह कक्ष अभी शांत है।<br>
+    समय के साथ यहाँ ध्यानमय संगीत, ध्वनियाँ और
+    कुछ ऐसे स्वर रखे जाएँगे जिन्हें सुनने के लिए जल्दी न हो।
+  </div>
+
 </main>
+
+<footer>
+  <strong>हमारा घर</strong><br>
+  यह घर अभी निर्माणाधीन है।<br>
+  लेकिन इसकी पहली ईंट विश्वास से रखी गई है।
+</footer>
+
 </body>
 </html>
