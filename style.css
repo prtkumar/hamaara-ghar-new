@@ -1,0 +1,127 @@
+:root{
+  --bg:#f5f0e6;
+  --paper:#fffdf8;
+  --text:#29271f;
+  --soft:#777267;
+  --line:#ded7c8;
+  --accent:#776746;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Noto Serif Devanagari","Nirmala UI",serif;
+  line-height:1.9;
+}
+
+header{
+  padding:28px 22px;
+  border-bottom:1px solid var(--line);
+  background:rgba(255,253,248,.88);
+}
+
+nav{
+  max-width:900px;
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px 22px;
+}
+
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  font-size:16px;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+main{
+  max-width:760px;
+  margin:auto;
+  padding:80px 24px 100px;
+}
+
+h1{
+  margin:0 0 24px;
+  font-size:clamp(38px,8vw,64px);
+  line-height:1.25;
+  font-weight:500;
+}
+
+h2{
+  margin:60px 0 18px;
+  font-size:30px;
+  font-weight:500;
+}
+
+h3{
+  font-size:23px;
+  font-weight:500;
+}
+
+p{
+  font-size:19px;
+  margin:0 0 24px;
+}
+
+.intro{
+  font-size:23px;
+  color:#4d493f;
+}
+
+.room{
+  margin:48px 0;
+  padding-top:32px;
+  border-top:1px solid var(--line);
+}
+
+.note{
+  color:var(--soft);
+}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:55px 25px;
+  text-align:center;
+  color:var(--soft);
+  background:var(--paper);
+}
+
+@media(max-width:600px){
+  header{
+    padding:20px 14px;
+  }
+
+  nav{
+    gap:8px 15px;
+  }
+
+  nav a{
+    font-size:14px;
+  }
+
+  main{
+    padding:55px 22px 75px;
+  }
+
+  p{
+    font-size:18px;
+  }
+
+  .intro{
+    font-size:21px;
+  }
+}
