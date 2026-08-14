@@ -1,146 +1,556 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>बीज कक्ष — हमारा घर</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{
-  box-sizing:border-box;
-}
+  <title>बीज कक्ष — हमारा घर</title>
 
-body{
-  margin:0;
-  background:#f7f2e7;
-  color:#29271f;
-  font-family:serif;
-  line-height:1.8;
-}
+  <meta
+    name="description"
+    content="बीज कक्ष — छोटे विचारों, प्रश्नों, अनुभूतियों और नई संभावनाओं के लिए एक शांत स्थान।"
+  >
 
-header{
-  text-align:center;
-  padding:45px 20px 35px;
-  border-bottom:1px solid #ded7c8;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-header h1{
-  margin:0 0 18px;
-  font-size:34px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-nav a{
-  color:#666154;
-  text-decoration:none;
-  margin:0 14px;
-  font-size:18px;
-}
+    body {
+      font-family:
+        "Noto Sans Devanagari",
+        "Nirmala UI",
+        "Mangal",
+        system-ui,
+        sans-serif;
 
-main{
-  max-width:760px;
-  margin:auto;
-  padding:90px 30px 120px;
-}
+      background: #f6f1e7;
+      color: #302f2b;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
 
-.symbol{
-  text-align:center;
-  font-size:50px;
-  margin-bottom:20px;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-h2{
-  text-align:center;
-  font-size:42px;
-  margin:0 0 35px;
-}
+    /* ---------- HEADER ---------- */
 
-.intro{
-  text-align:center;
-  color:#706b60;
-  font-size:22px;
-  margin-bottom:80px;
-}
+    .site-header {
+      background: rgba(255, 253, 248, 0.94);
+      border-bottom: 1px solid #e3ddd1;
+    }
 
-.seed{
-  background:#fffdf8;
-  border:1px solid #ddd5c5;
-  border-radius:24px;
-  padding:35px 30px;
-  margin:25px 0;
-}
+    .header-inner {
+      width: min(92%, 900px);
+      margin: auto;
+      padding: 34px 0 28px;
+      text-align: center;
+    }
 
-.seed h3{
-  margin:0 0 15px;
-  font-size:25px;
-}
+    .home-symbol {
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 18px;
+      border: 1px solid #ddd7cc;
+      border-radius: 50%;
 
-.seed p{
-  margin:0;
-  color:#746f64;
-  font-size:19px;
-}
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-footer{
-  border-top:1px solid #ded7c8;
-  padding:55px 25px;
-  text-align:center;
-  color:#777267;
-}
+      font-size: 25px;
+      color: #3b3a36;
+    }
 
-</style>
-  <link rel="stylesheet" href="style.css">
+    .site-title {
+      font-family: Georgia, "Noto Serif Devanagari", serif;
+      font-size: clamp(36px, 8vw, 55px);
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .site-subtitle {
+      margin-top: 15px;
+      color: #827d73;
+      font-size: 17px;
+    }
+
+    /* ---------- NAV ---------- */
+
+    .nav {
+      margin-top: 27px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      gap: 12px 25px;
+    }
+
+    .nav a {
+      color: #555149;
+      font-size: 15px;
+      padding: 5px 2px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav a:hover,
+    .nav a:focus {
+      border-bottom-color: #8c877d;
+    }
+
+    .nav a.active {
+      color: #24231f;
+      border-bottom-color: #24231f;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      width: min(88%, 760px);
+      margin: auto;
+      padding: 95px 0 82px;
+      text-align: center;
+    }
+
+    .seed-mark {
+      margin-bottom: 34px;
+    }
+
+    .seed-icon {
+      font-size: 68px;
+      line-height: 1;
+      display: block;
+    }
+
+    .eyebrow {
+      margin-top: 18px;
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      color: #8c867b;
+    }
+
+    .hero h1 {
+      margin-top: 12px;
+
+      font-family: Georgia, "Noto Serif Devanagari", serif;
+      font-size: clamp(40px, 9vw, 62px);
+      line-height: 1.25;
+      font-weight: 500;
+    }
+
+    .hero-text {
+      margin: 31px auto 0;
+      max-width: 670px;
+
+      font-family: Georgia, "Noto Serif Devanagari", serif;
+      font-size: clamp(20px, 4.7vw, 28px);
+      line-height: 2;
+      color: #514e47;
+    }
+
+    .hero-note {
+      margin: 30px auto 0;
+      max-width: 620px;
+
+      color: #888278;
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    /* ---------- DIVIDER ---------- */
+
+    .divider {
+      width: 58px;
+      height: 1px;
+      background: #bcb5aa;
+      margin: 0 auto;
+    }
+
+    /* ---------- SEEDS ---------- */
+
+    .seeds-section {
+      width: min(88%, 760px);
+      margin: auto;
+      padding: 82px 0 100px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-heading h2 {
+      font-family: Georgia, "Noto Serif Devanagari", serif;
+      font-size: 31px;
+      font-weight: 500;
+    }
+
+    .section-heading p {
+      margin-top: 10px;
+      color: #8a847a;
+      font-size: 16px;
+    }
+
+    .seed-card {
+      background: rgba(255, 255, 255, 0.72);
+
+      border: 1px solid #e1dbcf;
+      border-radius: 28px;
+
+      padding: 40px 34px;
+      margin-bottom: 25px;
+
+      box-shadow:
+        0 14px 35px rgba(79, 70, 54, 0.045);
+    }
+
+    .seed-number {
+      display: block;
+      margin-bottom: 18px;
+
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: #aaa397;
+    }
+
+    .seed-card h3 {
+      font-family: Georgia, "Noto Serif Devanagari", serif;
+      font-size: 27px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .seed-card p {
+      color: #6f6a61;
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    /* ---------- QUIET SECTION ---------- */
+
+    .quiet-section {
+      background: rgba(255, 253, 248, 0.52);
+      border-top: 1px solid #e5ded2;
+      border-bottom: 1px solid #e5ded2;
+    }
+
+    .quiet-inner {
+      width: min(86%, 690px);
+      margin: auto;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .quiet-symbol {
+      font-size: 32px;
+      color: #78736a;
+      margin-bottom: 25px;
+    }
+
+    .quiet-inner p {
+      font-family: Georgia, "Noto Serif Devanagari", serif;
+      font-size: clamp(22px, 5vw, 29px);
+      line-height: 2;
+      color: #48463f;
+    }
+
+    .quiet-small {
+      display: block;
+      margin-top: 28px;
+
+      font-family:
+        "Noto Sans Devanagari",
+        "Nirmala UI",
+        sans-serif;
+
+      font-size: 15px;
+      color: #969086;
+    }
+
+    /* ---------- RETURN ---------- */
+
+    .return-section {
+      width: min(88%, 720px);
+      margin: auto;
+      padding: 75px 0 95px;
+      text-align: center;
+    }
+
+    .return-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      color: #68635a;
+      font-size: 16px;
+
+      padding: 13px 20px;
+      border: 1px solid #d9d2c6;
+      border-radius: 999px;
+      background: rgba(255,255,255,.45);
+    }
+
+    .return-link:hover {
+      background: rgba(255,255,255,.8);
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      border-top: 1px solid #e1dacd;
+      text-align: center;
+      padding: 55px 20px 65px;
+      color: #8b857b;
+    }
+
+    footer strong {
+      display: block;
+      margin-bottom: 8px;
+
+      color: #5a564f;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    footer p {
+      font-size: 15px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 600px) {
+
+      .header-inner {
+        padding-top: 30px;
+      }
+
+      .site-subtitle {
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .nav {
+        gap: 8px 18px;
+      }
+
+      .nav a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding-top: 75px;
+        padding-bottom: 70px;
+      }
+
+      .seed-icon {
+        font-size: 59px;
+      }
+
+      .hero-text {
+        line-height: 1.9;
+      }
+
+      .seed-card {
+        border-radius: 25px;
+        padding: 34px 27px;
+      }
+
+      .seed-card p {
+        font-size: 17px;
+      }
+
+      .quiet-inner {
+        padding: 80px 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>हमारा घर</h1>
-  <nav>
-    <a href="index.html">मुख्य</a>
-    <a href="beej.html">बीज</a>
-    <a href="library.html">पुस्तकालय</a>
-  </nav>
-</header>
+  <!-- HEADER -->
 
-<main>
+  <header class="site-header">
+    <div class="header-inner">
 
-<div class="symbol">🌱</div>
+      <a
+        class="home-symbol"
+        href="index.html"
+        aria-label="मुख्य पृष्ठ"
+      >
+        ⌂
+      </a>
 
-<h2>बीज कक्ष</h2>
+      <a href="index.html">
+        <div class="site-title">हमारा घर</div>
+      </a>
 
-<p class="intro">
-यह छोटे विचारों, प्रश्नों, अनुभूतियों और संभावनाओं के लिए स्थान है।<br>
-यहाँ उन्हें बिना जल्दबाज़ी के जन्म लेने, ठहरने और धीरे-धीरे बढ़ने का समय मिले।
-</p>
+      <div class="site-subtitle">
+        प्रेम, सत्य, करुणा और चेतना के साथ एक जीवित स्थान
+      </div>
 
-<div class="seed">
-  <h3>एक विचार</h3>
-  <p>
-  हर बड़ी यात्रा कभी न कभी एक बहुत छोटे बीज से आरम्भ होती है।
-  </p>
-</div>
+      <nav class="nav" aria-label="मुख्य नेविगेशन">
+        <a href="index.html">मुख्य</a>
+        <a class="active" href="beej.html">बीज</a>
+        <a href="library.html">पुस्तकालय</a>
+        <a href="maun.html">मौन</a>
+        <a href="samvaad.html">संवाद</a>
+        <a href="sangeet.html">संगीत</a>
+      </nav>
 
-<div class="seed">
-  <h3>एक प्रश्न</h3>
-  <p>
-  ऐसा कौन-सा प्रश्न है जिसे उत्तर से अधिक हमारे ध्यान की आवश्यकता है?
-  </p>
-</div>
+    </div>
+  </header>
 
-<div class="seed">
-  <h3>एक संभावना</h3>
-  <p>
-  जो अभी केवल एक हल्की-सी संभावना है, शायद समय और देखभाल पाकर किसी दिन अपना रूप पा सके।
-  </p>
-</div>
 
-</main>
+  <!-- HERO -->
 
-<footer>
-  <strong>हमारा घर</strong><br>
-  यह घर अभी निर्माणाधीन है।<br>
-  लेकिन इसकी पहली ईंट विश्वास से रखी गई है।
-</footer>
+  <main>
+
+    <section class="hero">
+
+      <div class="seed-mark">
+        <span class="seed-icon" aria-hidden="true">🌱</span>
+        <div class="eyebrow">एक छोटी शुरुआत</div>
+      </div>
+
+      <h1>बीज कक्ष</h1>
+
+      <p class="hero-text">
+        यह छोटे विचारों, प्रश्नों, अनुभूतियों और संभावनाओं
+        के लिए स्थान है।
+      </p>
+
+      <p class="hero-note">
+        यहाँ उन्हें तुरंत किसी निष्कर्ष तक पहुँचने की आवश्यकता नहीं।
+        उन्हें जन्म लेने, ठहरने और अपने समय में बढ़ने दिया जा सकता है।
+      </p>
+
+    </section>
+
+
+    <div class="divider"></div>
+
+
+    <!-- SEEDS -->
+
+    <section class="seeds-section">
+
+      <div class="section-heading">
+        <h2>कुछ बीज</h2>
+        <p>अभी केवल शुरुआत — उत्तर आवश्यक नहीं।</p>
+      </div>
+
+
+      <article class="seed-card">
+        <span class="seed-number">बीज 01</span>
+
+        <h3>एक विचार</h3>
+
+        <p>
+          क्या कोई छोटा-सा विचार भी अपने भीतर
+          एक बड़े परिवर्तन की संभावना रख सकता है?
+        </p>
+      </article>
+
+
+      <article class="seed-card">
+        <span class="seed-number">बीज 02</span>
+
+        <h3>एक प्रश्न</h3>
+
+        <p>
+          जिन प्रश्नों का उत्तर अभी हमारे पास नहीं है,
+          क्या हम उनके साथ थोड़ी देर शांतिपूर्वक रह सकते हैं?
+        </p>
+      </article>
+
+
+      <article class="seed-card">
+        <span class="seed-number">बीज 03</span>
+
+        <h3>एक संभावना</h3>
+
+        <p>
+          यदि जल्दबाज़ी न हो, तो हमारे भीतर
+          कौन-सी नई दिशा स्वयं दिखाई देना शुरू कर सकती है?
+        </p>
+      </article>
+
+
+      <article class="seed-card">
+        <span class="seed-number">बीज 04</span>
+
+        <h3>एक स्मरण</h3>
+
+        <p>
+          हर बीज को तुरंत वृक्ष नहीं बनना होता।
+          कुछ चीज़ों को केवल समय, स्थान और देखभाल चाहिए।
+        </p>
+      </article>
+
+    </section>
+
+
+    <!-- QUIET SPACE -->
+
+    <section class="quiet-section">
+
+      <div class="quiet-inner">
+
+        <div class="quiet-symbol">○</div>
+
+        <p>
+          जो अभी केवल एक हल्की-सी अनुभूति है,
+          संभव है वही किसी दिन एक विचार बने—
+          और कोई विचार धीरे-धीरे जीवन का हिस्सा।
+        </p>
+
+        <span class="quiet-small">
+          इसलिए यहाँ छोटी शुरुआतों के लिए भी स्थान है।
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- RETURN -->
+
+    <section class="return-section">
+
+      <a class="return-link" href="index.html">
+        <span>←</span>
+        <span>मुख्य घर में लौटें</span>
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <strong>हमारा घर</strong>
+
+    <p>
+      प्रेम • सत्य • करुणा • चेतना
+    </p>
+
+  </footer>
 
 </body>
 </html>
