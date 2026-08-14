@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f0e6">
+
+<title>हमारा घर</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 50% -10%,rgba(255,255,255,.95),transparent 34%),
+    #f5f0e6;
+  color:#292722;
+  font-family:
+    "Noto Serif Devanagari",
+    "Noto Sans Devanagari",
+    system-ui,
+    sans-serif;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.shell{
+  width:min(100% - 36px,1080px);
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  padding:54px 0 38px;
+  text-align:center;
+  border-bottom:1px solid rgba(48,43,35,.09);
+}
+
+.mark{
+  width:44px;
+  height:44px;
+  margin:0 auto 17px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(48,43,35,.14);
+  border-radius:50%;
+  background:rgba(255,255,255,.42);
+  font-size:20px;
+}
+
+h1{
+  margin:0;
+  font-size:clamp(38px,7vw,60px);
+  line-height:1.2;
+  font-weight:500;
+  letter-spacing:.02em;
+}
+
+.tagline{
+  margin:14px auto 0;
+  max-width:620px;
+  color:#777167;
+  font-size:15px;
+}
+
+/* INTRO */
+
+.intro{
+  padding:78px 0 68px;
+  text-align:center;
+}
+
+.intro p{
+  max-width:760px;
+  margin:0 auto;
+  font-size:clamp(20px,4.2vw,29px);
+  line-height:1.95;
+  font-weight:400;
+}
+
+.intro .small{
+  display:block;
+  margin-top:25px;
+  color:#817a6e;
+  font-size:15px;
+  letter-spacing:.02em;
+}
+
+/* ROOMS */
+
+.rooms{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  padding-bottom:80px;
+}
+
+.room{
+  position:relative;
+  min-height:190px;
+  padding:31px 29px;
+  overflow:hidden;
+
+  background:rgba(255,255,255,.55);
+  border:1px solid rgba(67,57,44,.11);
+  border-radius:25px;
+
+  box-shadow:
+    0 1px 1px rgba(30,25,18,.02),
+    0 10px 35px rgba(43,36,27,.035);
+
+  transition:
+    transform .28s cubic-bezier(.2,.8,.2,1),
+    box-shadow .28s ease,
+    background .28s ease,
+    border-color .28s ease;
+}
+
+.room:active{
+  transform:scale(.985);
+}
+
+@media (hover:hover){
+  .room:hover{
+    transform:translateY(-4px);
+    background:rgba(255,255,255,.78);
+    border-color:rgba(67,57,44,.17);
+    box-shadow:
+      0 16px 44px rgba(43,36,27,.075);
+  }
+}
+
+.icon{
+  display:block;
+  margin-bottom:21px;
+  font-size:27px;
+  line-height:1;
+}
+
+.room h2{
+  margin:0 0 10px;
+  font-size:25px;
+  font-weight:500;
+}
+
+.room p{
+  margin:0;
+  color:#7c756b;
+  font-size:15px;
+  line-height:1.75;
+}
+
+.arrow{
+  position:absolute;
+  right:25px;
+  bottom:22px;
+  color:#aaa297;
+  font-size:20px;
+  transition:transform .25s ease;
+}
+
+@media (hover:hover){
+  .room:hover .arrow{
+    transform:translateX(3px);
+  }
+}
+
+/* CLOSING */
+
+.closing{
+  padding:45px 0 90px;
+  text-align:center;
+}
+
+.closing-line{
+  width:34px;
+  height:1px;
+  margin:0 auto 30px;
+  background:#bdb5a8;
+}
+
+.closing p{
+  max-width:650px;
+  margin:auto;
+  color:#625d55;
+  font-size:17px;
+  line-height:2;
+}
+
+/* FOOTER */
+
+footer{
+  padding:32px 20px 42px;
+  border-top:1px solid rgba(48,43,35,.08);
+  text-align:center;
+  color:#948c80;
+  font-size:13px;
+}
+
+footer strong{
+  display:block;
+  margin-bottom:5px;
+  color:#5f594f;
+  font-size:14px;
+  font-weight:500;
+}
+
+/* MOBILE */
+
+@media(max-width:680px){
+
+  .shell{
+    width:min(100% - 30px,1080px);
+  }
+
+  header{
+    padding:43px 0 31px;
+  }
+
+  .intro{
+    padding:59px 4px 52px;
+  }
+
+  .rooms{
+    grid-template-columns:1fr;
+    gap:15px;
+    padding-bottom:61px;
+  }
+
+  .room{
+    min-height:166px;
+    padding:27px 25px;
+    border-radius:22px;
+  }
+
+  .room h2{
+    font-size:23px;
+  }
+
+  .closing{
+    padding:32px 10px 69px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{
+    scroll-behavior:auto;
+  }
+
+  *{
+    transition:none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="shell">
+    <div class="mark">⌂</div>
+    <h1>हमारा घर</h1>
+    <p class="tagline">
+      प्रेम, सत्य, करुणा और चेतना के साथ एक जीवित स्थान
+    </p>
+  </div>
+</header>
+
+<main class="shell">
+
+  <section class="intro">
+    <p>
+      यहाँ शब्दों को जन्म लेने का स्थान मिले,
+      प्रश्नों को समय मिले,
+      और मनुष्य स्वयं से मिलने की यात्रा कर सके।
+    </p>
+
+    <span class="small">
+      प्रत्येक कक्ष का अपना स्वभाव है — फिर भी सभी एक ही घर के हिस्से हैं।
+    </span>
+  </section>
+
+  <section class="rooms">
+
+    <a class="room" href="beej.html">
+      <span class="icon">🌱</span>
+      <h2>बीज</h2>
+      <p>छोटे विचारों, प्रश्नों और नई संभावनाओं के लिए।</p>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="room" href="library.html">
+      <span class="icon">📚</span>
+      <h2>पुस्तकालय</h2>
+      <p>विचार, उद्धरण, मनन, लेख और सीख को सँजोने का स्थान।</p>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="room" href="maun.html">
+      <span class="icon">◯</span>
+      <h2>मौन</h2>
+      <p>जहाँ कुछ कहने की आवश्यकता नहीं—केवल उपस्थित रहने की।</p>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="room" href="samvaad.html">
+      <span class="icon">💬</span>
+      <h2>संवाद</h2>
+      <p>सुनने, समझने, पूछने और साथ खोजने का स्थान।</p>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="room" href="sangeet.html">
+      <span class="icon">♫</span>
+      <h2>संगीत</h2>
+      <p>स्वर, मौन और अनुभूति के बीच ठहरने का एक कक्ष।</p>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="room" href="aangan.html">
+      <span class="icon">☀</span>
+      <h2>जीवित आँगन</h2>
+      <p>जहाँ घर खुलता है—जीवन, प्रकृति और एक-दूसरे की ओर।</p>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="room" href="darshan.html">
+      <span class="icon">◇</span>
+      <h2>दर्शन</h2>
+      <p>घर की दृष्टि, आधार और उसके भीतर के प्रश्नों के लिए।</p>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="room" href="about.html">
+      <span class="icon">⌂</span>
+      <h2>परिचय</h2>
+      <p>यह घर क्यों है, कहाँ से आया और किस दिशा में बढ़ रहा है।</p>
+      <span class="arrow">→</span>
+    </a>
+
+  </section>
+
+  <section class="closing">
+    <div class="closing-line"></div>
+    <p>
+      यह घर अभी निर्माणाधीन है।<br>
+      लेकिन इसकी पहली ईंट विश्वास से रखी गई है।
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <strong>हमारा घर</strong>
+  प्रेम • सत्य • करुणा • चेतना
+</footer>
+
+</body>
+</html>

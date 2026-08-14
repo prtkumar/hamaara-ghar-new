@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>हमारा घर</title>
+
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      background:#f7f3ea;
+      color:#302d28;
+      font-family:
+        "Noto Sans Devanagari",
+        "Mangal",
+        sans-serif;
+      line-height:1.8;
+    }
+
+    header{
+      text-align:center;
+      padding:80px 20px 55px;
+      border-bottom:1px solid #ded7c8;
+    }
+
+    .symbol{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    h1{
+      margin:0;
+      font-size:44px;
+      font-weight:500;
+      letter-spacing:1px;
+    }
+
+    .tagline{
+      max-width:650px;
+      margin:22px auto 0;
+      font-size:20px;
+      color:#6c675d;
+    }
+
+    main{
+      max-width:900px;
+      margin:auto;
+      padding:65px 22px 90px;
+    }
+
+    .welcome{
+      max-width:720px;
+      margin:0 auto 65px;
+      text-align:center;
+      font-size:21px;
+    }
+
+    .rooms{
+      display:grid;
+      grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;
+    }
+
+    .room{
+      display:block;
+      padding:30px 25px;
+      border:1px solid #d9d1c2;
+      border-radius:14px;
+      background:#fbf8f1;
+      color:#302d28;
+      text-decoration:none;
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .room:hover{
+      transform:translateY(-3px);
+      box-shadow:0 8px 22px rgba(0,0,0,.07);
+    }
+
+    .room h2{
+      margin:0 0 8px;
+      font-size:23px;
+      font-weight:500;
+    }
+
+    .room p{
+      margin:0;
+      color:#777267;
+      font-size:16px;
+    }
+
+    footer{
+      border-top:1px solid #ded7c8;
+      padding:50px 25px;
+      text-align:center;
+      color:#777267;
+    }
+
+    footer strong{
+      color:#403b34;
+      font-weight:500;
+    }
+
+    @media(max-width:600px){
+      header{
+        padding:60px 20px 45px;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      .tagline{
+        font-size:18px;
+      }
+
+      main{
+        padding-top:50px;
+      }
+
+      .welcome{
+        font-size:19px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="symbol">⌂</div>
+
+  <h1>हमारा घर</h1>
+
+  <div class="tagline">
+    एक जीवित घर — जहाँ शब्दों को जन्म लेने का स्थान मिले,
+    प्रश्नों को समय मिले और मनुष्य स्वयं से मिलने की यात्रा कर सके।
+  </div>
+</header>
+
+<main>
+
+  <div class="welcome">
+    यह यात्रा प्रेम, सत्य, करुणा और चेतना के साथ है।
+    यहाँ प्रत्येक कक्ष का अपना स्वभाव है —
+    लेकिन सभी एक ही घर के हिस्से हैं।
+  </div>
+
+  <div class="rooms">
+
+    <a class="room" href="beej.html">
+      <h2>🌱 बीज</h2>
+      <p>
+        छोटे विचारों, प्रश्नों और नई सम्भावनाओं के लिए।
+      </p>
+    </a>
+
+    <a class="room" href="library.html">
+      <h2>📚 पुस्तकालय</h2>
+      <p>
+        विचार, उद्धरण, मनन, लेख और सीख को सँजोने का स्थान।
+      </p>
+    </a>
+
+    <a class="room" href="maun.html">
+      <h2>⭕ मौन</h2>
+      <p>
+        रुकने, सुनने और स्वयं के भीतर उतरने का स्थान।
+      </p>
+    </a>
+
+    <a class="room" href="samvaad.html">
+      <h2>💬 संवाद</h2>
+      <p>
+        सुनने, समझने और एक-दूसरे के पास उपस्थित होने की जगह।
+      </p>
+    </a>
+
+    <a class="room" href="sangeet.html">
+      <h2>♪ संगीत</h2>
+      <p>
+        स्वर, मौन और हृदय के बीच जन्म लेने वाले अनुभवों के लिए।
+      </p>
+    </a>
+
+    <a class="room" href="darshan.html">
+      <h2>◉ दर्शन</h2>
+      <p>
+        जीवन को गहराई से देखने, समझने और प्रश्न करने का कक्ष।
+      </p>
+    </a>
+
+    <a class="room" href="aangan.html">
+      <h2>☀ जीवित आँगन</h2>
+      <p>
+        जहाँ जीवन, प्रकृति, संबंध और सहज उपस्थिति साथ मिलें।
+      </p>
+    </a>
+
+    <a class="room" href="about.html">
+      <h2>⌂ परिचय</h2>
+      <p>
+        इस घर की भावना, उद्देश्य और यात्रा के बारे में।
+      </p>
+    </a>
+
+  </div>
+
+</main>
+
+<footer>
+  <strong>हमारा घर</strong><br>
+  यह घर अभी निर्माणाधीन है।<br>
+  लेकिन इसकी पहली ईंट विश्वास से रखी गई है।
+</footer>
+
+</body>
+</html>
